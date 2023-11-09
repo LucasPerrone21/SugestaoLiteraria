@@ -1,6 +1,6 @@
-function buscarLivros(categoria) {
+function buscarLivros(categoria, indice = 0) {
     return fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=subject:${categoria}`
+        `https://www.googleapis.com/books/v1/volumes?q=subject:${categoria}&startIndex=${indice}&maxResults=6`
     )
         .then((resposta) => {
             if (resposta.ok) {
@@ -18,8 +18,18 @@ function buscarLivros(categoria) {
 }
 
 function capturaDados(livros) {
+    if (livros === undefined) {
+        return [];
+    }
     const listaLivros = [];
     livros.forEach((livro) => {
+        let linkIMG
+        try {
+            linkIMG = livro.volumeInfo.imageLinks.thumbnail;
+        }
+        catch (error) {
+            linkIMG = "./imagens/livroNulo.svg";
+        }
         const objLivro = {
             titulo: livro.volumeInfo.title, // string de título
             autor: livro.volumeInfo.authors, // array de autores
@@ -27,7 +37,7 @@ function capturaDados(livros) {
             data: livro.volumeInfo.publishedDate, // string de data em diversos formatos, favor padronizar
             editora: livro.volumeInfo.publisher, // string de editora
             descricao: livro.volumeInfo.description, // string de descrição
-            urlFoto: livro.volumeInfo.imageLinks.thumbnail, // string de url da foto da capa (pode acabar ficando vazio, favor tratar)
+            urlFoto: linkIMG // string de url da foto da capa
         };
         listaLivros.push(objLivro);
     });
