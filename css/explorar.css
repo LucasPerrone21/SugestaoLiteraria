@@ -96,6 +96,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    transition: ease-in-out 1s;
 }
 
 .container-livro-item {
@@ -105,6 +106,7 @@
     margin-bottom: 3rem;
     border-radius: 4px;
     width: 47%;
+    transition: ease-in-out 1s;
 }
 
 .imagem-livro {

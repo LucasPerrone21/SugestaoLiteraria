@@ -1,14 +1,9 @@
-import {geraTemplate} from './template.js'
-
-
-
 const list_element = document.getElementById('caixaDeLivros');
-const pagination_element = document.getElementById('pagination');
 
 let pagina_atual = 1;
 let livros = 4;
 
-export function MostrarLivros (items, container, livros_por_pagina, pagina) {
+export function MostrarLivrosPesquisados(items, container, livros_por_pagina, pagina) {
 	container.innerHTML = "";
 	pagina--;
 
@@ -39,7 +34,7 @@ function PaginationButton (pagina, items) {
 
 	button.addEventListener('click', function () {
 		pagina_atual = pagina;
-		MostrarLivros(items, list_element, livros, pagina_atual);
+		MostrarLivrosPesquisados(items, list_element, livros, pagina_atual);
 
 		let current_btn = document.querySelector('.pagenumbers button.active');
 		current_btn.classList.remove('active');

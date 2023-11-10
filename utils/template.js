@@ -19,7 +19,7 @@ function geraTemplate(
                 <p class="livro-texto"><span class="bold">Idioma: </span>${idiomaLivro}</p>
                 <p class="livro-texto"><span class="bold">Publicado em: </span>${dataPublicacao}</p>
                 <p class="livro-texto"><span class="bold">Editora: </span>${editoraLivro}</p>
-            </div>;
+            </div>
         <a href="#" class="botao-saiba-mais">Saiba mais </a>
         </div>
     </li>`;

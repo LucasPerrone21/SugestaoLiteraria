@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/menu-hamburger.css">
 
 
-    <script src="utils/MostrarLivros.js" type="module"></script>
+    <script src="utils/MostrarLivrosPesquisados.js" type="module"></script>
     <link rel="stylesheet" href="css/paginacao.css">
 
 </head>
@@ -42,10 +42,10 @@
                         <a class="texto-navegador" href="#banner">Início</a>
                     </li>
                     <li class="navegador-lista-item navegador-lista-item-central">
-                        <a class="texto-navegador" href="#categorias">Categoria</a>
+                        <a class="texto-navegador" href="#explorar">Categoria</a>
                     </li>
                     <li class="navegador-lista-item navegador-lista-item-last">
-                        <a href="#sugestoes" class="botao-cabecalho texto-navegador">Sugestões</a>
+                        <a href="#sugestao" class="botao-cabecalho texto-navegador">Sugestões</a>
                     </li>
                 </ul>
             </div>
@@ -59,10 +59,10 @@
 
                 <ul class="banner-lista">
                     <li>
-                        <a class="banner-botao" href="#categorias">Categorias</a>
+                        <a class="banner-botao" href="#explorar">Categorias</a>
                     </li>
                     <li>
-                        <a class="banner-botao banner-botao-sugestao" href="#sugestoes">Sugestões</a>
+                        <a class="banner-botao banner-botao-sugestao" href="#sugestao">Sugestões</a>
                     </li>
                 </ul>
             </div>
@@ -74,10 +74,10 @@
                 <h2 class="explorar-titulo fonteDiferente">Explore novas categorias</h2>
                 <input class="explorar-pesquisa" placeholder="Pesquisar categoria" type="text" id="caixaDePesquisa">
             </div>
-            <div class="cointainer-chips scroll-container">
+            <div class="cointainer-chips scroll-container" id="categorias_container">
                 <button class="chips-item chip-tecnologia">Tecnologia</button>
                 <button class="chips-item chip-romance">Romance</button>
-                <button class="chips-item chip-suspense">Suspense</button>
+                <button class="chips-item chip-suspense" >Suspense</button>
                 <button class="chips-item chip-bibliografia">Bibliografia</button>
                 <button class="chips-item chip-educacao">Educação</button>
 
@@ -143,18 +143,18 @@
                                 <p class="livro-autor">Morgan House</p>
                                 <p class="livro-texto"><span class="bold">Idioma: </span>Inglês</p>
                                 <p class="livro-texto"><span class="bold">Publicado em: </span>11/11/2022</p>
-                                <p class="livro-texto"><span class="bold">Editora: </span>Editora 1</p>
+                                <p class="livro-texto"><span class="bold">Editora: </span></p>
                             </div>
                             <a href="#" class="botao-saiba-mais">Saiba mais </a>
 
                         </div>
                     </li>
                 </ul>
-
+                <div class="pagenumbers" id="pagination"></div>
             </div>
             
         </section>
-        <div class="pagenumbers" id="pagination"></div>
+        
        
 
         <section class="sugestao" id="sugestao">
