@@ -51,7 +51,7 @@ for (const button of btns_sugestão) {
     button.addEventListener("click", async (event) => {
 
         const categoria = GeneroAleatorio();
-        const indice = inteiroAleatorio(40)
+        const indice = inteiroAleatorio(20)
         console.log(categoria) 
         const listaLivros = await buscarLivros(categoria, indice, 4);
 
@@ -64,7 +64,7 @@ for (const button of btns_sugestão) {
 
 async function LivrosIniciais(){
     const categoria = GeneroAleatorio();
-    const indice = inteiroAleatorio(40)
+    const indice = inteiroAleatorio(20)
     const listaLivros = await buscarLivros(categoria, indice, 4);
     const lista_templates = criarLivrosTemplates(listaLivros, categoria);
     MostrarLivrosPesquisados(lista_templates, buscaContainer, 4, 1);
@@ -73,7 +73,7 @@ async function LivrosIniciais(){
 
 async function sugestaoIniciais(){
     const categoria = GeneroAleatorio();
-    const indice = inteiroAleatorio(40)
+    const indice = inteiroAleatorio(20)
     const listaLivros = await buscarLivros(categoria, indice, 4);
     const lista_templates = criarLivrosTemplates(listaLivros, categoria);
 
