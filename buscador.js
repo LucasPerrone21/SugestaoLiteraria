@@ -17,7 +17,7 @@ const btns_sugestão = document.querySelectorAll('.btn-sugestao')
 caixaDePesquisa.addEventListener("keypress", async (event) => {
     if (event.key === "Enter") {
         const pesquisa = caixaDePesquisa.value
-        const listaLivros = await buscarLivros(pesquisa, 30, 40);
+        const listaLivros = await buscarLivros(pesquisa, 0, 40);
         console.log(listaLivros) // isso retorna uma lista de objetos, usem o console do navegador para ver como ela é. (pode demorar um pouquinho para aparecer, pois a API demora um pouco para responder)
         // terminem o código aqui.
         // OBS1: usem o arquivo "template.js", vai ser bem útil.
