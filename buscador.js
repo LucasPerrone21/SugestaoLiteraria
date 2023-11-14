@@ -1,7 +1,7 @@
 import { buscarLivros } from "./utils/pesquisaLivros.js";
 import {MostrarLivrosPesquisados, SetupPagination} from "./utils/MostrarLivrosPesquisados.js"
 import { criarLivrosTemplates } from "./CriarLivrosTemplates.js";
-import { GeneroAleatorio } from "./utils/Sugestão.js";
+import { GeneroAleatorio, inteiroAleatorio } from "./utils/Sugestão.js";
 
 const caixaDePesquisa = document.querySelector("#caixaDePesquisa");
 
@@ -51,8 +51,9 @@ for (const button of btns_sugestão) {
     button.addEventListener("click", async (event) => {
 
         const categoria = GeneroAleatorio();
+        const indice = inteiroAleatorio(40)
         console.log(categoria) 
-        const listaLivros = await buscarLivros(categoria, 0, 4);
+        const listaLivros = await buscarLivros(categoria, indice, 4);
 
         const lista_templates = criarLivrosTemplates(listaLivros, categoria);
         console.log(lista_templates)
@@ -63,7 +64,8 @@ for (const button of btns_sugestão) {
 
 async function LivrosIniciais(){
     const categoria = GeneroAleatorio();
-    const listaLivros = await buscarLivros(categoria, 0, 4);
+    const indice = inteiroAleatorio(40)
+    const listaLivros = await buscarLivros(categoria, indice, 4);
     const lista_templates = criarLivrosTemplates(listaLivros, categoria);
     MostrarLivrosPesquisados(lista_templates, buscaContainer, 4, 1);
 
@@ -71,7 +73,8 @@ async function LivrosIniciais(){
 
 async function sugestaoIniciais(){
     const categoria = GeneroAleatorio();
-    const listaLivros = await buscarLivros(categoria, 0, 4);
+    const indice = inteiroAleatorio(40)
+    const listaLivros = await buscarLivros(categoria, indice, 4);
     const lista_templates = criarLivrosTemplates(listaLivros, categoria);
 
     MostrarLivrosPesquisados(lista_templates, sugestaoContainer, 4, 1);

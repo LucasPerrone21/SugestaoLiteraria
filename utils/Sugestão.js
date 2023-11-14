@@ -2,8 +2,13 @@ const generos = ['Tecnologia', 'Romance', 'Suspense', 'Bibligrafia', 'Educação
 
 
 export function GeneroAleatorio(){
-    const numeroAleatorio = Math.floor(Math.random() * 20)
+    const numeroAleatorio = inteiroAleatorio(20)
     return generos[numeroAleatorio]
+}
+
+export function inteiroAleatorio(num){
+    const numeroAleatorio = Math.floor(Math.random() * num)
+    return numeroAleatorio
 }
 
 
