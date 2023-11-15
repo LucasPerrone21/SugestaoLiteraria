@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="css/menu-hamburger.css">
 
 
-    <script src="utils/MostrarLivrosPesquisados.js" type="module"></script>
+  
     <link rel="stylesheet" href="css/paginacao.css">
-
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 
 <body>
@@ -44,8 +44,8 @@
                     <li class="navegador-lista-item navegador-lista-item-central">
                         <a class="texto-navegador" href="#explorar">Categoria</a>
                     </li>
-                    <li class="navegador-lista-item navegador-lista-item-last">
-                        <a href="#sugestao" class="botao-cabecalho texto-navegador">Sugestões</a>
+                    <li class="navegador-lista-item navegador-lista-item-last btn-sugestao">
+                        <a href="#sugestao" class="botao-cabecalho texto-navegador" >Sugestões</a>
                     </li>
                 </ul>
             </div>
@@ -62,7 +62,7 @@
                         <a class="banner-botao" href="#explorar">Categorias</a>
                     </li>
                     <li>
-                        <a class="banner-botao banner-botao-sugestao" href="#sugestao">Sugestões</a>
+                        <a class="banner-botao banner-botao-sugestao btn-sugestao" href="#sugestao" >Sugestões</a>
                     </li>
                 </ul>
             </div>
@@ -87,68 +87,7 @@
                 <h2 class="resultado-busca fonteDiferente">Resultados da busca:</h2>
 
                 <ul class="container-livro" id="caixaDeLivros">
-                    <li class="container-livro-item">
-                        <img class="imagem-livro" src="imagens/livro.png" alt="">
-                        <div class="livros-dados-externos">
-                            <div class="livros-dados">
-                                <p class="livro-categoria">Categoria: Psicologia</p>
-                                <h3 class="livro-titulo">The Psychology of Money</h3>
-                                <p class="livro-autor">Morgan House</p>
-                                <p class="livro-texto"><span class="bold">Idioma: </span>Inglês</p>
-                                <p class="livro-texto"><span class="bold">Publicado em: </span>11/11/2022</p>
-                                <p class="livro-texto"><span class="bold">Editora: </span>Editora 1</p>
-                            </div>
-                            <a href="#" class="botao-saiba-mais">Saiba mais </a>
 
-                        </div>
-                    </li>
-                    <li class="container-livro-item">
-                        <img class="imagem-livro" src="imagens/livro.png" alt="">
-                        <div class="livros-dados-externos">
-                            <div class="livros-dados">
-                                <p class="livro-categoria">Categoria: Psicologia</p>
-                                <h3 class="livro-titulo">The Psychology of Money</h3>
-                                <p class="livro-autor">Morgan House</p>
-                                <p class="livro-texto"><span class="bold">Idioma: </span>Inglês</p>
-                                <p class="livro-texto"><span class="bold">Publicado em: </span>11/11/2022</p>
-                                <p class="livro-texto"><span class="bold">Editora: </span>Editora 1</p>
-                            </div>
-                            <a href="#" class="botao-saiba-mais">Saiba mais </a>
-
-                        </div>
-                    </li>
-                    <li class="container-livro-item">
-                        <img class="imagem-livro" src="imagens/livro.png" alt="">
-                        <div class="livros-dados-externos">
-                            <div class="livros-dados">
-                                <p class="livro-categoria">Categoria: Psicologia</p>
-                                <h3 class="livro-titulo">The Psychology of Money</h3>
-                                <p class="livro-autor">Morgan House</p>
-                                <p class="livro-texto"><span class="bold">Idioma: </span>Inglês</p>
-                                <p class="livro-texto"><span class="bold">Publicado em: </span>11/11/2022</p>
-                                <p class="livro-texto"><span class="bold">Editora: </span>Editora 1</p>
-                            </div>
-                            <a href="#" class="botao-saiba-mais">Saiba mais </a>
-
-                        </div>
-                    </li>
-                    <li class="container-livro-item">
-
-                        <img class="imagem-livro" src="imagens/livro.png" alt="">
-
-                        <div class="livros-dados-externos">
-                            <div class="livros-dados">
-                                <p class="livro-categoria">Categoria: Psicologia</p>
-                                <h3 class="livro-titulo">The Psychology of Money</h3>
-                                <p class="livro-autor">Morgan House</p>
-                                <p class="livro-texto"><span class="bold">Idioma: </span>Inglês</p>
-                                <p class="livro-texto"><span class="bold">Publicado em: </span>11/11/2022</p>
-                                <p class="livro-texto"><span class="bold">Editora: </span></p>
-                            </div>
-                            <a href="#" class="botao-saiba-mais">Saiba mais </a>
-
-                        </div>
-                    </li>
                 </ul>
                 <div class="pagenumbers" id="pagination"></div>
             </div>
@@ -159,37 +98,8 @@
 
         <section class="sugestao" id="sugestao">
             <h2 class="sugestao-titulo fonteDiferente">Sugestões para você</h2>
-            <ul class="container-livro">
-                <li class="container-livro-item">
-                    <img class="imagem-livro" src="imagens/livro.png" alt="">
-                    <div class="livros-dados-externos">
-                        <div class="livros-dados">
-                            <p class="livro-categoria">Categoria: Psicologia</p>
-                            <h3 class="livro-titulo">The Psychology of Money</h3>
-                            <p class="livro-autor">Morgan House</p>
-                            <p class="livro-texto"><span class="bold">Idioma: </span>Inglês</p>
-                            <p class="livro-texto"><span class="bold">Publicado em: </span>11/11/2022</p>
-                            <p class="livro-texto"><span class="bold">Editora: </span>Editora 1</p>
-                        </div>
-                        <a href="#" class="botao-saiba-mais">Saiba mais </a>
-
-                    </div>
-                </li>
-                <li class="container-livro-item">
-                    <img class="imagem-livro" src="imagens/livro.png" alt="">
-                    <div class="livros-dados-externos">
-                        <div class="livros-dados">
-                            <p class="livro-categoria">Categoria: Psicologia</p>
-                            <h3 class="livro-titulo">The Psychology of Money</h3>
-                            <p class="livro-autor">Morgan House</p>
-                            <p class="livro-texto"><span class="bold">Idioma: </span>Inglês</p>
-                            <p class="livro-texto"><span class="bold">Publicado em: </span>11/11/2022</p>
-                            <p class="livro-texto"><span class="bold">Editora: </span>Editora 1</p>
-                        </div>
-                        <a href="#" class="botao-saiba-mais">Saiba mais </a>
-
-                    </div>
-                </li>
+            <ul class="container-livro" id="sugestao-container">
+              
             </ul>
         </section>
         
@@ -201,5 +111,6 @@
 </body>
 <script type="text/javascript" src="menu-hamburger.js"></script>
 <script src="buscador.js" type="module"></script>
+<script src="utils/modal.js"></script>
 
 </html>

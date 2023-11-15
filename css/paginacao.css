@@ -3,7 +3,8 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	transition: ease-in 1s;
+	transition: ease-in 0.5s;
+	margin-bottom: 50px;
 }
 
 .pagenumbers button {
