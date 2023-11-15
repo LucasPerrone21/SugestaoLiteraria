@@ -13,7 +13,7 @@ export function criarLivrosTemplates(listaLivros, categoria){
             const editora = livro.editora
             const descricao = livro.descricao
 
-            const livro_template = geraTemplate(urlFoto, categoria, titulo, autor, idioma, data ,editora);
+            const livro_template = geraTemplate(urlFoto, categoria, titulo, autor, idioma, data ,editora, descricao);
 
             list_templates.push(livro_template)
 

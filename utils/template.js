@@ -5,7 +5,8 @@ function geraTemplate(
     autorLivro,
     idiomaLivro,
     dataPublicacao,
-    editoraLivro
+    editoraLivro,
+    descrição
 ) {
     let template = 
     `<li class="container-livro-item">
@@ -19,9 +20,26 @@ function geraTemplate(
                 <p class="livro-texto"><span class="bold">Idioma: </span>${idiomaLivro}</p>
                 <p class="livro-texto"><span class="bold">Publicado em: </span>${dataPublicacao}</p>
                 <p class="livro-texto"><span class="bold">Editora: </span>${editoraLivro}</p>
+                
             </div>
-        <a href="#" class="botao-saiba-mais">Saiba mais </a>
+            <a onclick="openModal(event)" class="botao-saiba-mais" >Saiba mais </a>
+            
         </div>
+        <div class="modal-container">
+                <div class="modal">
+                    <h2> ${tituloLivro} - Sinopse:</h2>
+                    <hr />
+                    <span>
+                        ${descrição}
+                    </span>
+                    <hr />
+                    <div class="btns">
+                        <button class="btnOK" onclick="closeModal(event)">OK</button>
+                        <button class="btnClose" onclick="closeModal(event)">Close</button>
+                    </div>
+                </div>
+            </div>
+        
     </li>`;
 
     return template;

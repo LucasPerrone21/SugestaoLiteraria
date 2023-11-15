@@ -1,0 +1,98 @@
+
+  .btnOpenModal {
+    font-size: x-large;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+  }
+  
+  hr {
+    border: 0px;
+    border-top: 1px solid lightgray;
+  }
+  
+  .modal-container {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    display: none;
+    z-index: 10;
+    justify-content: center;
+  }
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 30px;
+    top: 25vh;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 400px;
+    block-size: fit-content;
+    z-index: 20;
+  }
+  
+  .active {
+    display: flex;
+  }
+  
+  .active .modal {
+    animation: modal .4s;
+  }
+
+  
+  
+  @keyframes modal {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -60px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  span {
+    margin: 10px auto;
+  }
+  
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .btns button {
+    font-size: medium;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .btnOK {
+   background-color: #9f624f!important;
+  }
+  
+  .btnClose {
+    background-color: #59372b!important;
+   }
+  
+   @media (max-width: 500px) {
+    .modal {
+      padding: 10px;
+      width: 80%;
+    }   
+  
+    span, .btns button {
+      font-size: smaller;
+    }
+   }
