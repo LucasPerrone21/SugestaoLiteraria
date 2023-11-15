@@ -14,6 +14,19 @@ export function MostrarLivrosPesquisados(items, container, livros_por_pagina, pa
 
     container.innerHTML += paginatedItems
 
+	paginatedItems.forEach((item) => {
+		let livroCard = document.createElement("div");
+		livroCard.innerHTML = item;
+  
+		// Adiciona evento de clique ao botão "Saiba mais"
+		let saibaMaisButton = livroCard.querySelector(".botao-saiba-mais");
+		saibaMaisButton.addEventListener("click", () => {
+		   abrirModal(item);
+		});
+  
+		container.appendChild(livroCard);
+	});
+
 }
 
 export function SetupPagination (items, container, livros_por_pagina) {
@@ -45,3 +58,36 @@ function PaginationButton (pagina, items) {
 	return button;
 }
 
+
+// Função para abrir o modal com a descrição do livro
+async function abrirModal(livroHtml) {
+	// Cria um elemento temporário para extrair as informações do livro
+	let tempElement = document.createElement("div");
+	tempElement.innerHTML = livroHtml;
+ 
+	// Extrai as informações do livro
+	let titulo = tempElement.querySelector(".livro-titulo").textContent;
+ 
+	// Obtem a descrição do livro diretamente da API
+	let descricao = await obterDescricaoDoLivro(titulo);
+ 
+	// Preenche o modal com as informações
+	document.getElementById("modalTitle").innerText = titulo;
+	document.getElementById("modalDescription").innerText = descricao;
+ 
+	// Mostra o modal
+	document.getElementById("myModal").style.display = "block";
+ }
+ 
+ // Função para obter a descrição do livro da API
+ async function obterDescricaoDoLivro(titulo) {
+	try {
+	   const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${titulo}`);
+	   const data = await response.json();
+	   const descricao = data.items[0]?.volumeInfo?.description || "Descrição não disponível";
+	   return descricao;
+	} catch (error) {
+	   console.error("Erro ao obter a descrição do livro:", error);
+	   return "Descrição não disponível";
+	}
+ }
