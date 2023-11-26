@@ -53,12 +53,12 @@ for (const button of btns_sugestão) {
         const categoria = GeneroAleatorio();
         const indice = inteiroAleatorio(20)
         console.log(categoria) 
-        const listaLivros = await buscarLivros(categoria, indice, 4);
+        const listaLivros = await buscarLivros(categoria, indice, 2);
 
         const lista_templates = criarLivrosTemplates(listaLivros, categoria);
         console.log(lista_templates)
 
-        MostrarLivrosPesquisados(lista_templates, sugestaoContainer, 4, 1);
+        MostrarLivrosPesquisados(lista_templates, sugestaoContainer, 2, 1);
     });
 }
 
@@ -74,10 +74,10 @@ async function LivrosIniciais(){
 async function sugestaoIniciais(){
     const categoria = GeneroAleatorio();
     const indice = inteiroAleatorio(20)
-    const listaLivros = await buscarLivros(categoria, indice, 4);
+    const listaLivros = await buscarLivros(categoria, indice, 2);
     const lista_templates = criarLivrosTemplates(listaLivros, categoria);
 
-    MostrarLivrosPesquisados(lista_templates, sugestaoContainer, 4, 1);
+    MostrarLivrosPesquisados(lista_templates, sugestaoContainer, 2, 1);
 
 }
 
