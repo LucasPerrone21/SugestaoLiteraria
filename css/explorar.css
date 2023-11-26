@@ -39,8 +39,9 @@
 .cointainer-chips {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 3rem;
+    gap: 1.5rem;
 }
 
 .chips-item {
