@@ -25,22 +25,21 @@ function geraTemplate(
             <a onclick="openModal(event)" class="botao-saiba-mais" >Saiba mais </a>
             
         </div>
+        
         <div class="modal-container">
                 <div class="modal">
-                    <h2> ${tituloLivro} - Sinopse:</h2>
+                    <h1 id="modal-titulo"> ${tituloLivro} - Sinopse:</h1>
                     <hr />
-                    <span>
+                    <span id="modal-descricao">
                         ${descrição}
                     </span>
                     <hr />
                     <div class="btns">
-                        <button class="btnOK" onclick="closeModal(event)">OK</button>
-                        <button class="btnClose" onclick="closeModal(event)">Close</button>
+                        <button class="btnClose" onclick="closeModal(event)">Fechar</button>
                     </div>
                 </div>
-            </div>
-        
-    </li>`;
+        </div>
+    </li>`
 
     return template;
 }

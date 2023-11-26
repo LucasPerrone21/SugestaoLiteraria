@@ -39,8 +39,9 @@
 .cointainer-chips {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 3rem;
+    gap: 1.5rem;
 }
 
 .chips-item {
@@ -95,7 +96,7 @@
 .container-livro {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     transition: ease-in-out 0.5s;
 }
 
@@ -140,6 +141,8 @@
     color: var(--marrom-primario);
     font-size: 1.5rem;
     font-weight: 700;
+    max-height: 200px;
+    overflow: hidden;
 }
 
 .livro-autor {
@@ -156,9 +159,16 @@
     text-decoration: none;
     color: var(--marrom-primario);
     font-weight: bold;
-    background-image: url("../imagens/icones/Plus.svg");
-    background-repeat: no-repeat;
-    background-position: 45% 50%;
+    cursor: pointer;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: #9f624f;
+    color: white;
+}
+
+.botao-saiba-mais:hover{
+    background-color: #59372b;
 }
 
 /* Reponsivo */

@@ -23,6 +23,7 @@
     display: none;
     z-index: 10;
     justify-content: center;
+    background-color: rgba(0,0,0,0.5);
   }
   
   .modal {
@@ -36,8 +37,21 @@
     max-width: 400px;
     block-size: fit-content;
     z-index: 20;
+    box-shadow: 12px 17px 15px -3px rgba(0, 0, 0, 0.1);
+    border: solid 1px black;
+  }
+
+  #modal-titulo{
+    font-weight: bolder;
+    
   }
   
+  #modal-descricao{
+    max-height: 400px;
+    overflow: hidden;
+    text-align: justify;
+    text-justify: auto;
+  }
   .active {
     display: flex;
   }
@@ -90,6 +104,7 @@
     .modal {
       padding: 10px;
       width: 80%;
+      top: 10vh;
     }   
   
     span, .btns button {

@@ -34,4 +34,18 @@
 .pagenumbers button.active {
 	background-color: #59372b;
 	box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+	display: block;
+}
+
+@media (max-width: 865px) {
+   .pagenumbers{
+		display: grid;
+		grid-template-columns: 50px 50px 50px 50px 50px;
+		gap: 10px;
+		
+   }
+
+   .pagenumbers button{
+		margin: 0px;
+   }
 }
