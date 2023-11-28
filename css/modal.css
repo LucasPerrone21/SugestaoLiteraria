@@ -23,7 +23,7 @@
     display: none;
     z-index: 10;
     justify-content: center;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.9);
   }
   
   .modal {
@@ -31,19 +31,22 @@
     flex-direction: column;
     position: fixed;
     padding: 30px;
-    top: 25vh;
+    top: 2vh;
     background-color: white;
     border-radius: 10px;
     max-width: 400px;
     block-size: fit-content;
     z-index: 20;
-    box-shadow: 12px 17px 15px -3px rgba(0, 0, 0, 0.1);
-    border: solid 1px black;
+    box-shadow: 12px 17px 15px -3px rgba(0, 0, 0, 0.8);
   }
 
   #modal-titulo{
     font-weight: bolder;
     
+  }
+
+  #modal-titulo::selection {
+    background-color: var(--marrom-quaternario);
   }
   
   #modal-descricao{
@@ -52,6 +55,11 @@
     text-align: justify;
     text-justify: auto;
   }
+
+  #modal-descricao::selection {
+    background-color: var(--marrom-quaternario);
+  }
+
   .active {
     display: flex;
   }
@@ -82,6 +90,25 @@
     justify-content: space-between;
     margin-top: 10px;
   }
+
+  .btnOK {
+    background-color: #9f624f;
+   }
+
+  .btnClose {
+    background-color: #59372b;
+   }
+
+   .btnClose:hover {
+    scale: 1.05;
+    transition: 200ms;
+  }
+
+  .btnClose:active {
+    background-color: var(--marrom-quaternario);
+    scale: 0.95;
+    transition: 200ms;
+  }
   
   .btns button {
     font-size: medium;
@@ -92,13 +119,9 @@
     cursor: pointer;
   }
   
-  .btnOK {
-   background-color: #9f624f!important;
-  }
   
-  .btnClose {
-    background-color: #59372b!important;
-   }
+  
+  
   
    @media (max-width: 500px) {
     .modal {

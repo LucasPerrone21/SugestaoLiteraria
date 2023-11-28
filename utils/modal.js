@@ -29,5 +29,4 @@ function modalEventListiner(modal_container){
     }
   })
   
-
 }

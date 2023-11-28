@@ -1,6 +1,8 @@
-function buscarLivros(categoria, indice = 0, tamanho) {
+function buscarLivros(categoria, indice = 0, tamanho, RestricaoIdioma = true) {
+    categoria = categoria.replace(" ", "+");
+
     return fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=subject:${categoria}&startIndex=${indice}&maxResults=${tamanho}`
+        `https://www.googleapis.com/books/v1/volumes?q=subject:${categoria}&startIndex=${indice}&maxResults=${tamanho}&printType=books&orderBy=relevance`
     )
         .then((resposta) => {
             if (resposta.ok) {
