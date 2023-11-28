@@ -18,7 +18,9 @@ export function criarLivrosTemplates(listaLivros, categoria){
             if (livro.autor == undefined){
                 autor = 'Desconhecido'
             }else{
+                livro.autor = livro.autor.toString().replaceAll(',' , ', ')
                 autor = livro.autor
+
             }
 
             let idioma = livro.idioma
@@ -33,7 +35,7 @@ export function criarLivrosTemplates(listaLivros, categoria){
             
             let descricao;
             if (livro.descricao == undefined){
-                descricao = 'Livro sem descrição!!!'
+                descricao = 'Descrição não disponivel'
             }else{
                 descricao = livro.descricao
             }
