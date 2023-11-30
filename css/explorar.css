@@ -26,10 +26,12 @@
     background-image: url("../imagens/icones/MagnifyingGlass.svg");
     background-repeat: no-repeat;
     background-position: calc(0% + 8px);
+
 }
 
 .explorar-pesquisa:focus {
     outline: none;
+    
 }
 
 .explorar-pesquisa::placeholder {
